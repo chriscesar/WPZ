@@ -45,6 +45,20 @@ ssKenb.no3.106 <- rkt(correct=T,date = pt.50950106$timestamp, y=pt.50950106$no3,
 ssKenb.no3.125 <- rkt(correct=T,date = pt.50950125$timestamp, y=pt.50950125$no3, block=pt.50950125$month,rep = "m")
 ssKenb.no3.217 <- rkt(correct=T,date = pt.50950217$timestamp, y=pt.50950217$no3, block=pt.50950217$month,rep = "m")
 ssKenb.no3.249 <- rkt(correct=T,date = pt.50950249$timestamp, y=pt.50950249$no3, block=pt.50950249$month,rep = "m")
+## ID trends in no3 WITHOUT serial correction & salinity covariable
+cvsKenb.no3.149 <- rkt(correct=F,date = pt.50900149$timestamp, y=pt.50900149$no3, block=pt.50900149$month,rep = "m", cv = pt.50900149$sal)
+cvsKenb.no3.387 <- rkt(correct=F,date = pt.50900387$timestamp, y=pt.50900387$no3, block=pt.50900387$month,rep = "m", cv = pt.50900387$sal)
+cvsKenb.no3.106 <- rkt(correct=F,date = pt.50950106$timestamp, y=pt.50950106$no3, block=pt.50950106$month,rep = "m", cv = pt.50950106$sal)
+cvsKenb.no3.125 <- rkt(correct=F,date = pt.50950125$timestamp, y=pt.50950125$no3, block=pt.50950125$month,rep = "m", cv = pt.50950125$sal)
+cvsKenb.no3.217 <- rkt(correct=F,date = pt.50950217$timestamp, y=pt.50950217$no3, block=pt.50950217$month,rep = "m", cv = pt.50950217$sal)##SIG
+cvsKenb.no3.249 <- rkt(correct=F,date = pt.50950249$timestamp, y=pt.50950249$no3, block=pt.50950249$month,rep = "m", cv = pt.50950249$sal)
+## ID trends in no3 WITH serial correction & salinity covariable
+cvssKenb.no3.149 <- rkt(correct=T,date = pt.50900149$timestamp, y=pt.50900149$no3, block=pt.50900149$month,rep = "m", cv = pt.50900149$sal)
+cvssKenb.no3.387 <- rkt(correct=T,date = pt.50900387$timestamp, y=pt.50900387$no3, block=pt.50900387$month,rep = "m", cv = pt.50900387$sal)
+cvssKenb.no3.106 <- rkt(correct=T,date = pt.50950106$timestamp, y=pt.50950106$no3, block=pt.50950106$month,rep = "m", cv = pt.50950106$sal)
+cvssKenb.no3.125 <- rkt(correct=T,date = pt.50950125$timestamp, y=pt.50950125$no3, block=pt.50950125$month,rep = "m", cv = pt.50950125$sal)
+cvssKenb.no3.217 <- rkt(correct=T,date = pt.50950217$timestamp, y=pt.50950217$no3, block=pt.50950217$month,rep = "m", cv = pt.50950217$sal)
+cvssKenb.no3.249 <- rkt(correct=T,date = pt.50950249$timestamp, y=pt.50950249$no3, block=pt.50950249$month,rep = "m", cv = pt.50950249$sal)
 ## Plot all
 p <- ggplot(data = mydat.trm, aes(x= date, y = no3, group = ptcode,
                                   colour = ptcode))
@@ -116,6 +130,20 @@ ssKenb.no2.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$no2,bl
 ssKenb.no2.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$no2,block=pt.50950125$month, rep = "m")
 ssKenb.no2.217 <- rkt(correct=T,date=pt.50950217$timestamp, y=pt.50950217$no2,block=pt.50950217$month, rep = "m")
 ssKenb.no2.249 <- rkt(correct=T,date=pt.50950249$timestamp, y=pt.50950249$no2,block=pt.50950249$month, rep = "m")
+## ID trends in no2 WITHOUT Serial correction & salinity covariable
+cvsKenb.no2.149 <- rkt(correct=F,date=pt.50900149$timestamp, y=pt.50900149$no2,block=pt.50900149$month, rep = "m", cv = pt.50900149$sal)#SIG!
+cvsKenb.no2.387 <- rkt(correct=F,date=pt.50900387$timestamp, y=pt.50900387$no2,block=pt.50900387$month, rep = "m", cv = pt.50900387$sal)
+cvsKenb.no2.106 <- rkt(correct=F,date=pt.50950106$timestamp, y=pt.50950106$no2,block=pt.50950106$month, rep = "m", cv = pt.50950106$sal)
+cvsKenb.no2.125 <- rkt(correct=F,date=pt.50950125$timestamp, y=pt.50950125$no2,block=pt.50950125$month, rep = "m", cv = pt.50950125$sal)
+cvsKenb.no2.217 <- rkt(correct=F,date=pt.50950217$timestamp, y=pt.50950217$no2,block=pt.50950217$month, rep = "m", cv = pt.50950217$sal)##SIG
+cvsKenb.no2.249 <- rkt(correct=F,date=pt.50950249$timestamp, y=pt.50950249$no2,block=pt.50950249$month, rep = "m", cv = pt.50950249$sal)
+## ID trends in no2 WITH Serial correction & salinity covariable
+cvssKenb.no2.149 <- rkt(correct=T,date=pt.50900149$timestamp, y=pt.50900149$no2,block=pt.50900149$month, rep = "m", cv = pt.50900149$sal)#SIG!
+cvssKenb.no2.387 <- rkt(correct=T,date=pt.50900387$timestamp, y=pt.50900387$no2,block=pt.50900387$month, rep = "m", cv = pt.50900387$sal)
+cvssKenb.no2.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$no2,block=pt.50950106$month, rep = "m", cv = pt.50950106$sal)
+cvssKenb.no2.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$no2,block=pt.50950125$month, rep = "m", cv = pt.50950125$sal)
+cvssKenb.no2.217 <- rkt(correct=T,date=pt.50950217$timestamp, y=pt.50950217$no2,block=pt.50950217$month, rep = "m", cv = pt.50950217$sal)
+cvssKenb.no2.249 <- rkt(correct=T,date=pt.50950249$timestamp, y=pt.50950249$no2,block=pt.50950249$month, rep = "m", cv = pt.50950249$sal)
 ## Plot
 p <- ggplot(data = mydat.trm, aes(x= date, y = no2, group = ptcode,
                                   colour = ptcode))
@@ -204,6 +232,20 @@ ssKenb.nh3.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$nh3.fi
 ssKenb.nh3.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$nh3.fil.n, block=pt.50950125$month,rep = "m")
 ssKenb.nh3.217 <- rkt(correct=T,date=pt.50950217$timestamp, y=pt.50950217$nh3.fil.n, block=pt.50950217$month,rep = "m")##SIG
 ssKenb.nh3.249 <- rkt(correct=T,date=pt.50950249$timestamp, y=pt.50950249$nh3.fil.n, block=pt.50950249$month,rep = "m")##SIG!
+## ID trends in nh3 WITHOUT Serial Correction & salinity covariable
+cvsKenb.nh3.149 <- rkt(correct=F,date=pt.50900149$timestamp, y=pt.50900149$nh3.fil.n, block=pt.50900149$month,rep = "m", cv = pt.50900149$sal)
+cvsKenb.nh3.387 <- rkt(correct=F,date=pt.50900387$timestamp, y=pt.50900387$nh3.fil.n, block=pt.50900387$month,rep = "m", cv = pt.50900387$sal)##SIG
+cvsKenb.nh3.106 <- rkt(correct=F,date=pt.50950106$timestamp, y=pt.50950106$nh3.fil.n, block=pt.50950106$month,rep = "m", cv = pt.50950106$sal)
+cvsKenb.nh3.125 <- rkt(correct=F,date=pt.50950125$timestamp, y=pt.50950125$nh3.fil.n, block=pt.50950125$month,rep = "m", cv = pt.50950125$sal)
+cvsKenb.nh3.217 <- rkt(correct=F,date=pt.50950217$timestamp, y=pt.50950217$nh3.fil.n, block=pt.50950217$month,rep = "m", cv = pt.50950217$sal)##SIG
+cvsKenb.nh3.249 <- rkt(correct=F,date=pt.50950249$timestamp, y=pt.50950249$nh3.fil.n, block=pt.50950249$month,rep = "m", cv = pt.50950249$sal)##SIG!
+## ID trends in nh3 WITH Serial Correction & salinity covariable
+cvssKenb.nh3.149 <- rkt(correct=T,date=pt.50900149$timestamp, y=pt.50900149$nh3.fil.n, block=pt.50900149$month,rep = "m", cv = pt.50900149$sal)
+cvssKenb.nh3.387 <- rkt(correct=T,date=pt.50900387$timestamp, y=pt.50900387$nh3.fil.n, block=pt.50900387$month,rep = "m", cv = pt.50900387$sal)##SIG
+cvssKenb.nh3.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$nh3.fil.n, block=pt.50950106$month,rep = "m", cv = pt.50950106$sal)
+cvssKenb.nh3.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$nh3.fil.n, block=pt.50950125$month,rep = "m", cv = pt.50950125$sal)
+cvssKenb.nh3.217 <- rkt(correct=T,date=pt.50950217$timestamp, y=pt.50950217$nh3.fil.n, block=pt.50950217$month,rep = "m", cv = pt.50950217$sal)##SIG
+cvssKenb.nh3.249 <- rkt(correct=T,date=pt.50950249$timestamp, y=pt.50950249$nh3.fil.n, block=pt.50950249$month,rep = "m", cv = pt.50950249$sal)##SIG!
 ## Plot all
 p <- ggplot(data = mydat.trm, aes(x= date, y = nh3.fil.n, group = ptcode,
                                   colour = ptcode))
@@ -310,6 +352,20 @@ ssKenb.po4.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$po4,bl
 ssKenb.po4.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$po4,block=pt.50950125$month, rep = "m")
 ssKenb.po4.217 <- rkt(correct=T,date=pt.50950217$timestamp, y=pt.50950217$po4,block=pt.50950217$month, rep = "m")##SIG
 ssKenb.po4.249 <- rkt(correct=T,date=pt.50950249$timestamp, y=pt.50950249$po4,block=pt.50950249$month, rep = "m")
+## ID trends in po4 WITHOUT serial correction & salinity covariable
+cvsKenb.po4.149 <- rkt(correct=F,date=pt.50900149$timestamp, y=pt.50900149$po4,block=pt.50900149$month, rep = "m", cv=pt.50900149$sal)
+cvsKenb.po4.387 <- rkt(correct=F,date=pt.50900387$timestamp, y=pt.50900387$po4,block=pt.50900387$month, rep = "m", cv=pt.50900387$sal)##SIG
+cvsKenb.po4.106 <- rkt(correct=F,date=pt.50950106$timestamp, y=pt.50950106$po4,block=pt.50950106$month, rep = "m", cv=pt.50950106$sal)
+cvsKenb.po4.125 <- rkt(correct=F,date=pt.50950125$timestamp, y=pt.50950125$po4,block=pt.50950125$month, rep = "m", cv=pt.50950125$sal)
+cvsKenb.po4.217 <- rkt(correct=F,date=pt.50950217$timestamp, y=pt.50950217$po4,block=pt.50950217$month, rep = "m", cv=pt.50950217$sal)##SIG
+cvsKenb.po4.249 <- rkt(correct=F,date=pt.50950249$timestamp, y=pt.50950249$po4,block=pt.50950249$month, rep = "m", cv=pt.50950249$sal)##SIG
+## ID trends in po4 WITH serial correction & salinity covariable
+cvssKenb.po4.149 <- rkt(correct=T,date=pt.50900149$timestamp, y=pt.50900149$po4,block=pt.50900149$month, rep = "m", cv=pt.50900149$sal)
+cvssKenb.po4.387 <- rkt(correct=T,date=pt.50900387$timestamp, y=pt.50900387$po4,block=pt.50900387$month, rep = "m", cv=pt.50900387$sal)##SIG
+cvssKenb.po4.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$po4,block=pt.50950106$month, rep = "m", cv=pt.50950106$sal)
+cvssKenb.po4.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$po4,block=pt.50950125$month, rep = "m", cv=pt.50950125$sal)
+cvssKenb.po4.217 <- rkt(correct=T,date=pt.50950217$timestamp, y=pt.50950217$po4,block=pt.50950217$month, rep = "m", cv=pt.50950217$sal)##SIG
+cvssKenb.po4.249 <- rkt(correct=T,date=pt.50950249$timestamp, y=pt.50950249$po4,block=pt.50950249$month, rep = "m", cv=pt.50950249$sal)
 ## Plot
 p <- ggplot(data = mydat.trm, aes(x= date, y = po4, group = ptcode,
                                   colour = ptcode))
@@ -411,6 +467,20 @@ ssKenb.noxid.106 <- rkt(correct=T,date=pt.50950106$timestamp,y=pt.50950106$n.oxi
 ssKenb.noxid.125 <- rkt(correct=T,date=pt.50950125$timestamp,y=pt.50950125$n.oxid,block=pt.50950125$month,rep = "m")
 ssKenb.noxid.217 <- rkt(correct=T,date=pt.50950217$timestamp,y=pt.50950217$n.oxid,block=pt.50950217$month,rep = "m")##SIG
 ssKenb.noxid.249 <- rkt(correct=T,date=pt.50950249$timestamp,y=pt.50950249$n.oxid,block=pt.50950249$month,rep = "m")
+## ID trends in n.oxid WITHOUT serial correlation & salinity covariable
+cvsKenb.noxid.149 <- rkt(correct=F,date=pt.50900149$timestamp,y=pt.50900149$n.oxid,block=pt.50900149$month,rep = "m", cv=pt.50900149$sal)
+cvsKenb.noxid.387 <- rkt(correct=F,date=pt.50900387$timestamp,y=pt.50900387$n.oxid,block=pt.50900387$month,rep = "m", cv=pt.50900387$sal)
+cvsKenb.noxid.106 <- rkt(correct=F,date=pt.50950106$timestamp,y=pt.50950106$n.oxid,block=pt.50950106$month,rep = "m", cv=pt.50950106$sal)
+cvsKenb.noxid.125 <- rkt(correct=F,date=pt.50950125$timestamp,y=pt.50950125$n.oxid,block=pt.50950125$month,rep = "m", cv=pt.50950125$sal)
+cvsKenb.noxid.217 <- rkt(correct=F,date=pt.50950217$timestamp,y=pt.50950217$n.oxid,block=pt.50950217$month,rep = "m", cv=pt.50950217$sal)##SIG
+cvsKenb.noxid.249 <- rkt(correct=F,date=pt.50950249$timestamp,y=pt.50950249$n.oxid,block=pt.50950249$month,rep = "m", cv=pt.50950249$sal)
+## ID trends in n.oxid WITH serial correlation & salinity covariable
+cvssKenb.noxid.149 <- rkt(correct=T,date=pt.50900149$timestamp,y=pt.50900149$n.oxid,block=pt.50900149$month,rep = "m", cv=pt.50900149$sal)
+cvssKenb.noxid.387 <- rkt(correct=T,date=pt.50900387$timestamp,y=pt.50900387$n.oxid,block=pt.50900387$month,rep = "m", cv=pt.50900387$sal)
+cvssKenb.noxid.106 <- rkt(correct=T,date=pt.50950106$timestamp,y=pt.50950106$n.oxid,block=pt.50950106$month,rep = "m", cv=pt.50950106$sal)
+cvssKenb.noxid.125 <- rkt(correct=T,date=pt.50950125$timestamp,y=pt.50950125$n.oxid,block=pt.50950125$month,rep = "m", cv=pt.50950125$sal)
+cvssKenb.noxid.217 <- rkt(correct=T,date=pt.50950217$timestamp,y=pt.50950217$n.oxid,block=pt.50950217$month,rep = "m", cv=pt.50950217$sal)##SIG
+cvssKenb.noxid.249 <- rkt(correct=T,date=pt.50950249$timestamp,y=pt.50950249$n.oxid,block=pt.50950249$month,rep = "m", cv=pt.50950249$sal)
 ## Plot
 p <- ggplot(data = mydat.trm, aes(x= date, y = n.oxid, group = ptcode,
                                   colour = ptcode))
@@ -479,6 +549,20 @@ ssKenb.sio2.106 <- rkt(correct=T,date=pt.50950106$timestamp,y=pt.50950106$sio2,b
 ssKenb.sio2.125 <- rkt(correct=T,date=pt.50950125$timestamp,y=pt.50950125$sio2,block=pt.50950125$month,rep = "m")
 ssKenb.sio2.217 <- rkt(correct=T,date=pt.50950217$timestamp,y=pt.50950217$sio2,block=pt.50950217$month,rep = "m")
 ssKenb.sio2.249 <- rkt(correct=T,date=pt.50950249$timestamp,y=pt.50950249$sio2,block=pt.50950249$month,rep = "m")
+## ID trends in si02 WITHOUT serial correlation & salinity covariable
+cvsKenb.sio2.149 <- rkt(correct=F,date=pt.50900149$timestamp,y=pt.50900149$sio2,block=pt.50900149$month,rep = "m",cv = pt.50900149$sal)##SIG
+cvsKenb.sio2.387 <- rkt(correct=F,date=pt.50900387$timestamp,y=pt.50900387$sio2,block=pt.50900387$month,rep = "m",cv = pt.50900387$sal)
+cvsKenb.sio2.106 <- rkt(correct=F,date=pt.50950106$timestamp,y=pt.50950106$sio2,block=pt.50950106$month,rep = "m",cv = pt.50950106$sal)##SIG
+cvsKenb.sio2.125 <- rkt(correct=F,date=pt.50950125$timestamp,y=pt.50950125$sio2,block=pt.50950125$month,rep = "m",cv = pt.50950125$sal)##SIG
+cvsKenb.sio2.217 <- rkt(correct=F,date=pt.50950217$timestamp,y=pt.50950217$sio2,block=pt.50950217$month,rep = "m",cv = pt.50950217$sal)
+cvsKenb.sio2.249 <- rkt(correct=F,date=pt.50950249$timestamp,y=pt.50950249$sio2,block=pt.50950249$month,rep = "m",cv = pt.50950249$sal)
+## ID trends in si02 WITH serial correlation & salinity covariable
+cvssKenb.sio2.149 <- rkt(correct=T,date=pt.50900149$timestamp,y=pt.50900149$sio2,block=pt.50900149$month,rep = "m",,cv = pt.50900149$sal)##SIG
+cvssKenb.sio2.387 <- rkt(correct=T,date=pt.50900387$timestamp,y=pt.50900387$sio2,block=pt.50900387$month,rep = "m",,cv = pt.50900387$sal)
+cvssKenb.sio2.106 <- rkt(correct=T,date=pt.50950106$timestamp,y=pt.50950106$sio2,block=pt.50950106$month,rep = "m",,cv = pt.50950106$sal)
+cvssKenb.sio2.125 <- rkt(correct=T,date=pt.50950125$timestamp,y=pt.50950125$sio2,block=pt.50950125$month,rep = "m",,cv = pt.50950125$sal)
+cvssKenb.sio2.217 <- rkt(correct=T,date=pt.50950217$timestamp,y=pt.50950217$sio2,block=pt.50950217$month,rep = "m",,cv = pt.50950217$sal)
+cvssKenb.sio2.249 <- rkt(correct=T,date=pt.50950249$timestamp,y=pt.50950249$sio2,block=pt.50950249$month,rep = "m",,cv = pt.50950249$sal)
 ## Plot
 p <- ggplot(data = mydat.trm, aes(x= date, y = sio2, group = ptcode,
                                   colour = ptcode))
