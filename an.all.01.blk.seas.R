@@ -116,15 +116,24 @@ rm(p,a,q,lb1)
 #########
 ## NO2 ##
 #########
+################################################################
+## First, convert values to common minima for NO2
+pt.50900149$no2[pt.50900149$no2<0.002] <- 0.002
+pt.50900387$no2[pt.50900387$no2<0.002] <- 0.002
+pt.50950106$no2[pt.50950106$no2<0.002] <- 0.002
+pt.50950125$no2[pt.50950125$no2<0.002] <- 0.002
+pt.50950217$no2[pt.50950217$no2<0.002] <- 0.002
+pt.50950249$no2[pt.50950249$no2<0.002] <- 0.002
+################################################################
 ## ID trends in no2 WITHOUT Serial correction
-sKenb.no2.149 <- rkt(correct=F,date=pt.50900149$timestamp, y=pt.50900149$no2,block=pt.50900149$month, rep = "m")#SIG!
+sKenb.no2.149 <- rkt(correct=F,date=pt.50900149$timestamp, y=pt.50900149$no2,block=pt.50900149$month, rep = "m")
 sKenb.no2.387 <- rkt(correct=F,date=pt.50900387$timestamp, y=pt.50900387$no2,block=pt.50900387$month, rep = "m")
 sKenb.no2.106 <- rkt(correct=F,date=pt.50950106$timestamp, y=pt.50950106$no2,block=pt.50950106$month, rep = "m")
 sKenb.no2.125 <- rkt(correct=F,date=pt.50950125$timestamp, y=pt.50950125$no2,block=pt.50950125$month, rep = "m")
-sKenb.no2.217 <- rkt(correct=F,date=pt.50950217$timestamp, y=pt.50950217$no2,block=pt.50950217$month, rep = "m")##SIG
+sKenb.no2.217 <- rkt(correct=F,date=pt.50950217$timestamp, y=pt.50950217$no2,block=pt.50950217$month, rep = "m")
 sKenb.no2.249 <- rkt(correct=F,date=pt.50950249$timestamp, y=pt.50950249$no2,block=pt.50950249$month, rep = "m")
 ## ID trends in no2 WITH Serial correction
-ssKenb.no2.149 <- rkt(correct=T,date=pt.50900149$timestamp, y=pt.50900149$no2,block=pt.50900149$month, rep = "m")#SIG!
+ssKenb.no2.149 <- rkt(correct=T,date=pt.50900149$timestamp, y=pt.50900149$no2,block=pt.50900149$month, rep = "m")
 ssKenb.no2.387 <- rkt(correct=T,date=pt.50900387$timestamp, y=pt.50900387$no2,block=pt.50900387$month, rep = "m")
 ssKenb.no2.106 <- rkt(correct=T,date=pt.50950106$timestamp, y=pt.50950106$no2,block=pt.50950106$month, rep = "m")
 ssKenb.no2.125 <- rkt(correct=T,date=pt.50950125$timestamp, y=pt.50950125$no2,block=pt.50950125$month, rep = "m")
@@ -218,6 +227,15 @@ rm(p,a,q,lb1,r)
 #########
 ## NH3 ##
 #########
+################################################################
+## First, convert values to common minima for NH3
+pt.50900149$nh3.fil.n[pt.50900149$nh3.fil.n<0.01] <- 0.1
+pt.50900387$nh3.fil.n[pt.50900387$nh3.fil.n<0.01] <- 0.1
+pt.50950106$nh3.fil.n[pt.50950106$nh3.fil.n<0.01] <- 0.1
+pt.50950125$nh3.fil.n[pt.50950125$nh3.fil.n<0.01] <- 0.1
+pt.50950217$nh3.fil.n[pt.50950217$nh3.fil.n<0.01] <- 0.1
+pt.50950249$nh3.fil.n[pt.50950249$nh3.fil.n<0.01] <- 0.1
+################################################################
 ## ID trends in nh3 WITHOUT Serial Correction
 sKenb.nh3.149 <- rkt(correct=F,date=pt.50900149$timestamp, y=pt.50900149$nh3.fil.n, block=pt.50900149$month,rep = "m")
 sKenb.nh3.387 <- rkt(correct=F,date=pt.50900387$timestamp, y=pt.50900387$nh3.fil.n, block=pt.50900387$month,rep = "m")##SIG
